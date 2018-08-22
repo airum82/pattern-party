@@ -21,21 +21,55 @@ body {
   float: right;
 }
 
+/*Accordion Tabs*/
+.accordion-tabs {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  border-top: none;
+}
+
 .accordion-tabs_h3 {
   margin-top: 12%;
 }
 
-.accordion-tabs_div {
-  text-align: center;
-  margin-top: 10%;
+.accordion-tabs article {
+  display: none;
+  width: 100%;
 }
 
-.accordion-tabs_p {
-  display: inline;
+.accordion-tabs input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  order: 1;
 }
 
-.accordion-tabs_p--active {
+.accordion-tabs label {
+  margin: 0;
+  padding: 3% 9%;
+  border-bottom: 1px solid black;
+}
+.accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
+.accordion-tabs input:checked + .tab-2 ~ .tab-2_article,
+.accordion-tabs input:checked + .tab-3 ~ .tab-3_article,
+.accordion-tabs input:checked + .tab-4 ~ .tab-4_article {
+ display: block;
+ order: 2;
+}
+
+.accordion-tabs input:checked + label {
   border: 1px solid black;
   border-bottom: none;
+}
+
+.accordion-tabs input:checked + .tab-4 {
+  border-right: none;
+  padding: 3% 9.45%;
+}
+
+.accordion-tabs input:checked + .tab-1 {
+  border-left: none;
 }
 
