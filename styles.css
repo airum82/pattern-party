@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #3e4c9b;
+}
+
+.header_span {
+  color: lightblue;
+}
+
+.header_h1,
+.header_h2 {
+  margin: 0;
+  display: inline;
+  color: white;
+}
+
+.header_h2 {
+  float: right;
+}
+
+.accordion-tabs_h3 {
+  margin-top: 12%;
+}
+
+.accordion-tabs_div {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.accordion-tabs_p {
+  display: inline;
+}
+
+.accordion-tabs_p--active {
+  border: 1px solid black;
+  border-bottom: none;
+}
+
