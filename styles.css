@@ -27,8 +27,6 @@ body {
   width: 60%;
   margin: 0 auto;
   flex-wrap: wrap;
-  border: 1px solid black;
-  border-top: none;
 }
 
 .accordion-tabs_h3 {
@@ -38,6 +36,8 @@ body {
 .accordion-tabs article {
   display: none;
   width: 100%;
+  border: 1px solid black;
+  border-top: none;
 }
 
 .accordion-tabs input[type=radio] {
@@ -48,8 +48,11 @@ body {
 
 .accordion-tabs label {
   margin: 0;
-  padding: 3% 9%;
-  border-bottom: 1px solid black;
+  flex-grow: 2;
+  text-align: center;
+  border: 1px solid white;
+  height: 8vh;
+  background-color: lightblue;
 }
 .accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
 .accordion-tabs input:checked + .tab-2 ~ .tab-2_article,
@@ -60,16 +63,21 @@ body {
 }
 
 .accordion-tabs input:checked + label {
-  border: 1px solid black;
   border-bottom: none;
-}
-
-.accordion-tabs input:checked + .tab-4 {
   border-right: none;
-  padding: 3% 9.45%;
-}
-
-.accordion-tabs input:checked + .tab-1 {
   border-left: none;
 }
 
+.accordion-tabs input:checked + .tab-1 {
+  border-left: 1px solid black;
+}
+
+.tab-3,
+.tab-4 {
+  border-right: none;
+  border-left: none;
+}
+
+.accordion-tabs input:checked + .tab-4 {
+  border-right: 1px solid black;
+}
