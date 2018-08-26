@@ -54,6 +54,7 @@ body {
   height: 8vh;
   background-color: lightblue;
 }
+
 .accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
 .accordion-tabs input:checked + .tab-2 ~ .tab-2_article,
 .accordion-tabs input:checked + .tab-3 ~ .tab-3_article,
@@ -78,6 +79,47 @@ body {
   border-left: none;
 }
 
-.accordion-tabs input:checked + .tab-4 {
-  border-right: 1px solid black;
+.accordion-tabs input:checked + .tab-4,
+.accordion-tabs input:checked + .tab-3,
+.accordion-tabs input:checked + .tab-2,
+.accordion-tabs input:checked + .tab-1 {
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+.tabs-view-code {
+  border: 1px solid black;
+  text-decoration: none;
+  display: block;
+  margin: 8% auto;
+  width: 20vw;
+  height: 25px;
+  line-height: 150%;
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+
+.flexible-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.flexible-cards_div {
+  border: 1px solid black;
+  margin: 2%;
+}
+
+.flexible-cards_div--big {
+  flex-grow: 2;
+}
+
+.flexible-cards_h4 {
+  border-bottom: 1px solid black;
+}
+
+.flexible-cards_article {
+  height: 10vh;
 }
