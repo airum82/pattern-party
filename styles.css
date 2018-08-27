@@ -123,3 +123,18 @@ body {
 .flexible-cards_article {
   height: 10vh;
 }
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: grey;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.header_button {
+  height: 10vh;
+  flex-grow: .2;
+  border-radius: 25px;
+}
