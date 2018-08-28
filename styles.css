@@ -12,9 +12,9 @@ body {
 
 .header_h1,
 .header_h2 {
-  margin: 0;
-  display: inline;
   color: white;
+  display: inline;
+  margin: 0;
 }
 
 .header_h2 {
@@ -24,9 +24,9 @@ body {
 /*Accordion Tabs*/
 .accordion-tabs {
   display: flex;
-  width: 60%;
-  margin: 0 auto;
   flex-wrap: wrap;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .accordion-tabs_h3 {
@@ -34,25 +34,26 @@ body {
 }
 
 .accordion-tabs article {
+  border-top: none;
+  border: 1px solid black;
   display: none;
   width: 100%;
-  border: 1px solid black;
-  border-top: none;
 }
 
 .accordion-tabs input[type=radio] {
-  position: absolute;
   opacity: 0;
   order: 1;
+  position: absolute;
 }
 
 .accordion-tabs label {
-  margin: 0;
-  flex-grow: 2;
-  text-align: center;
-  border: 1px solid white;
-  height: 8vh;
   background-color: lightblue;
+  border: 1px solid white;
+  flex-grow: 2;
+  height: 8vh;
+  line-height: 220%;
+  margin: 0;
+  text-align: center;
 }
 
 .accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
@@ -65,8 +66,8 @@ body {
 
 .accordion-tabs input:checked + label {
   border-bottom: none;
-  border-right: none;
   border-left: none;
+  border-right: none;
 }
 
 .accordion-tabs input:checked + .tab-1 {
@@ -75,36 +76,36 @@ body {
 
 .tab-3,
 .tab-4 {
-  border-right: none;
   border-left: none;
+  border-right: none;
 }
 
 .accordion-tabs input:checked + .tab-4,
 .accordion-tabs input:checked + .tab-3,
 .accordion-tabs input:checked + .tab-2,
 .accordion-tabs input:checked + .tab-1 {
-  border: 1px solid black;
   border-bottom: none;
+  border: 1px solid black;
 }
 
 .tabs-view-code {
+  background-color: blue;
   border: 1px solid black;
-  text-decoration: none;
+  color: white;
   display: block;
-  margin: 8% auto;
-  width: 20vw;
   height: 25px;
   line-height: 150%;
+  margin: 8% auto;
   text-align: center;
-  background-color: blue;
-  color: white;
+  text-decoration: none;
+  width: 20vw;
 }
 
 .flexible-cards {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
   margin: 0 auto;
+  width: 60%;
 }
 
 .flexible-cards_div {
@@ -118,23 +119,35 @@ body {
 
 .flexible-cards_h4 {
   border-bottom: 1px solid black;
+  padding-left: 5%;
 }
 
 .flexible-cards_article {
   height: 10vh;
 }
 
-.header {
-  display: flex;
-  justify-content: space-evenly;
+.custom-header {
   align-items: center;
   background-color: grey;
-  width: 70vw;
+  display: flex;
+  justify-content: space-evenly;
   margin: 0 auto;
+  width: 70vw;
 }
 
 .header_button {
-  height: 10vh;
-  flex-grow: .2;
   border-radius: 25px;
+  flex-grow: .2;
+  height: 7vh;
+}
+
+@media only screen and (max-width: 580px) {
+  .accordion-tabs {
+    border: 1px solid black;
+    flex-direction: column;
+  }
+
+  .flexible-cards {
+    flex-direction: column;
+  }
 }
