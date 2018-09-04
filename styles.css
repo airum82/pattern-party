@@ -2,12 +2,23 @@ body {
   margin: 0;
 }
 
+.section-title_hr {
+  display: inline-block;
+  width: 75%;
+}
+
+/*pattern party header*/
 .header {
-  background-color: #3e4c9b;
+  background-color: #152270;
+  margin-bottom: 4%;
 }
 
 .header_span {
   color: lightblue;
+}
+
+.header_h1 {
+  font-weight: 100;
 }
 
 .header_h1,
@@ -19,6 +30,13 @@ body {
 
 .header_h2 {
   float: right;
+}
+
+.section-title {
+  display: inline-block;
+  font-weight: 100;
+  margin: 0 3%;
+  width: 12%;
 }
 
 /*Accordion Tabs*/
@@ -50,7 +68,7 @@ body {
   background-color: lightblue;
   border: 1px solid white;
   flex-grow: 2;
-  height: 8vh;
+  height: 6vh;
   line-height: 220%;
   margin: 0;
   text-align: center;
@@ -101,6 +119,25 @@ body {
   width: 20vw;
 }
 
+.x-box {
+  height: 28vh;
+  display:inline-block;
+  margin: 2%;
+}
+
+.accordion-tabs_div {
+  display: inline-block;
+  width: 65%;
+}
+
+.accordion-tabs_h3 {
+  margin: 2%;
+}
+
+hr {
+  opacity: .7;
+}
+
 .flexible-cards {
   display: flex;
   flex-wrap: wrap;
@@ -111,43 +148,88 @@ body {
 .flexible-cards_div {
   border: 1px solid black;
   margin: 2%;
+  flex-grow: 1;
+  flex-basis: 30%;;
 }
 
 .flexible-cards_div--big {
-  flex-grow: 2;
+  flex-grow: 1.5;
+  border: 1px solid black;
+  margin: 2%;
+  flex-basis: 60%;
 }
 
 .flexible-cards_h4 {
   border-bottom: 1px solid black;
   padding-left: 5%;
+  margin-bottom: 0;
 }
 
 .flexible-cards_article {
-  height: 10vh;
+  height: 22vh;
+}
+
+.x-box-flex {
+  width: 100%;
+  height: 100%;
 }
 
 .custom-header {
   align-items: center;
-  background-color: grey;
+  background-color: #aaa5a5;
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
   width: 70vw;
+  height: 12vh;
+}
+
+.custom-header p {
+  cursor: pointer;
 }
 
 .header_button {
   border-radius: 25px;
   flex-grow: .2;
   height: 7vh;
+  cursor: pointer;
+}
+
+.custom-header_search-field {
+  display: flex;
+}
+
+.custom-header_search-field input {
+  border: none;
+}
+
+.custom-header_spyglass {
+  height: 4vh;
+}
+
+@media only screen and (max-width: 850px) {
+  .custom-header {
+    flex-direction: column;
+    height: 50vh;
+    width: 30vh;
+  }
 }
 
 @media only screen and (max-width: 580px) {
   .accordion-tabs {
     border: 1px solid black;
     flex-direction: column;
+    text-align: center;
   }
 
   .flexible-cards {
     flex-direction: column;
+  }
+
+  .accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
+  .accordion-tabs input:checked + .tab-2 ~ .tab-2_article,
+  .accordion-tabs input:checked + .tab-3 ~ .tab-3_article,
+  .accordion-tabs input:checked + .tab-4 ~ .tab-4_article {
+    order: 0;
   }
 }
