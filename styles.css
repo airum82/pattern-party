@@ -9,16 +9,17 @@ body {
 
 /*pattern party header*/
 .header {
-  background-color: #152270;
+  background-color: #2F2235;
+  font-family: "Open Sans";
   margin-bottom: 4%;
 }
 
 .header_span {
-  color: lightblue;
+  color: #34D1D1;
 }
 
 .header_h1 {
-  font-weight: 100;
+  font-weight: lighter;
 }
 
 .header_h1,
@@ -34,7 +35,7 @@ body {
 
 .section-title {
   display: inline-block;
-  font-weight: 100;
+  font-weight: 300;
   margin: 0 3%;
   width: 12%;
 }
@@ -72,6 +73,7 @@ body {
   line-height: 220%;
   margin: 0;
   text-align: center;
+  max-height: 100px;
 }
 
 .accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
@@ -138,6 +140,8 @@ hr {
   opacity: .7;
 }
 
+/*Flexible cards*/
+
 .flexible-cards {
   display: flex;
   flex-wrap: wrap;
@@ -161,8 +165,10 @@ hr {
 
 .flexible-cards_h4 {
   border-bottom: 1px solid black;
+  font-weight: 600;
   padding-left: 5%;
   margin-bottom: 0;
+  padding-bottom: 5%;
 }
 
 .flexible-cards_article {
@@ -174,9 +180,11 @@ hr {
   height: 100%;
 }
 
+/*Custom header*/
+
 .custom-header {
   align-items: center;
-  background-color: #aaa5a5;
+  background-color: #D1D2D3;
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
@@ -186,6 +194,7 @@ hr {
 
 .custom-header p {
   cursor: pointer;
+  opacity: .6;
 }
 
 .header_button {
@@ -193,6 +202,7 @@ hr {
   flex-grow: .2;
   height: 7vh;
   cursor: pointer;
+  opacity: .6;
 }
 
 .custom-header_search-field {
@@ -205,6 +215,7 @@ hr {
 
 .custom-header_spyglass {
   height: 4vh;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 850px) {
