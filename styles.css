@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 body {
   margin: 0;
 }
@@ -10,8 +12,13 @@ body {
 /*pattern party header*/
 .header {
   background-color: #2F2235;
-  font-family: "Open Sans";
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 4%;
+}
+
+.header h1,
+.header h2 {
+  margin: 0 3%;
 }
 
 .header_span {
@@ -66,21 +73,22 @@ body {
 }
 
 .accordion-tabs label {
-  background-color: lightblue;
+  background-color: #F2F2F2;
   border: 1px solid white;
   flex-grow: 2;
   height: 6vh;
-  line-height: 220%;
+  line-height: 338%;
   margin: 0;
   text-align: center;
   max-height: 100px;
+  cursor: pointer;
 }
 
 .accordion-tabs input:checked + .tab-1 ~ .tab-1_article,
 .accordion-tabs input:checked + .tab-2 ~ .tab-2_article,
 .accordion-tabs input:checked + .tab-3 ~ .tab-3_article,
 .accordion-tabs input:checked + .tab-4 ~ .tab-4_article {
- display: block;
+ display: flex;
  order: 2;
 }
 
@@ -129,6 +137,7 @@ body {
 
 .accordion-tabs_div {
   display: inline-block;
+  align-self: center;
   width: 65%;
 }
 
@@ -241,6 +250,7 @@ hr {
   .accordion-tabs input:checked + .tab-2 ~ .tab-2_article,
   .accordion-tabs input:checked + .tab-3 ~ .tab-3_article,
   .accordion-tabs input:checked + .tab-4 ~ .tab-4_article {
+    display: block;
     order: 0;
   }
 }
