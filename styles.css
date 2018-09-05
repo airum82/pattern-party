@@ -214,10 +214,6 @@ hr {
   opacity: .6;
 }
 
-.custom-header_options {
-  width: 95%;
-}
-
 .custom-header_menu {
   display: none;
   float: right;
@@ -264,6 +260,10 @@ hr {
 
   .custom-header:hover .custom-header_search-field {
     display: flex;
+  }
+
+  .custom-header_options {
+    width: 95%;
   }
 }
 
