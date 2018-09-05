@@ -214,6 +214,16 @@ hr {
   opacity: .6;
 }
 
+.custom-header_options {
+  width: 95%;
+}
+
+.custom-header_menu {
+  display: none;
+  float: right;
+  margin-right: 2%;
+}
+
 .custom-header_search-field {
   display: flex;
 }
@@ -230,8 +240,30 @@ hr {
 @media only screen and (max-width: 850px) {
   .custom-header {
     flex-direction: column;
-    height: 50vh;
-    width: 30vh;
+    justify-content: center;
+    height: 10vh;
+    width: 33vh;
+  }
+
+  .navigation-link,
+  .custom-header_search-field {
+    display:none
+  }
+
+  .custom-header_menu {
+    display: inline-block;
+  }
+
+  .custom-header:hover {
+    height: 40vh;
+  }
+
+  .custom-header:hover p {
+    display: inline-block;
+  }
+
+  .custom-header:hover .custom-header_search-field {
+    display: flex;
   }
 }
 
