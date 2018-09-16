@@ -112,8 +112,8 @@ body {
 .accordion-tabs input:checked + .tab-3,
 .accordion-tabs input:checked + .tab-2,
 .accordion-tabs input:checked + .tab-1 {
-  border-bottom: none;
   border: 1px solid black;
+  border-bottom: none;
 }
 
 .tabs-view-code {
@@ -272,6 +272,17 @@ hr {
     border: 1px solid black;
     flex-direction: column;
     text-align: center;
+  }
+
+  .section-title {
+    display: block;
+    margin: 0 auto;
+    width: 36%;
+    text-align: center;
+  }
+
+  .section-title_hr {
+    display: block;
   }
 
   .flexible-cards {
